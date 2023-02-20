@@ -4,53 +4,48 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Time2;
+
 
 namespace Clock_and_Timer
 {
     public partial class Clock : Form
     {
-
-        CTime2 currentTime = new CTime2();
-
         public Clock()
         {
             InitializeComponent();
-            CurrentTime();
+            current_timer();
         }
 
-        
+        private int duration = 30;
 
-        public CTime2 CurrentTime()
+        public DateTime current_timer()
         {
-            DateTime dateTime = DateTime.Now;
-            int hour = dateTime.Hour;
-            int minute = dateTime.Minute;
-            int second = dateTime.Second;
-
-            currentTime.Hour = hour;
-            currentTime.Minute = minute;
-            currentTime.Second = second;
-
-            currentTime = new CTime2(currentTime.Hour, currentTime.Minute, currentTime.Second);
-            
-            timer1.Enabled = true;
-
-            return currentTime;
+            timer1 = new System.Windows.Forms.Timer();
+            timer1.Tick -= new EventHandler(count_down);
+            timer1.Interval = 1000;
+            timer1.Start();
         }
 
-        public void updateTime()
+        public void count_down()
         {
-            currentTime.addTime(0, 0, 1);
-            CurrentTimeLabel.Text = $"{currentTime.ToString()}";
+            if (duration == 0)
+            {
+                timer1.Stop();
+            }
+            else if (duration > 0)
+            {
+                duration--;
+                CurrentTimeLabel.Text = duration.ToString();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            updateTime();
+            count_down();
         }
 
 
