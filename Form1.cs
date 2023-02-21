@@ -20,7 +20,7 @@ namespace Clock_and_Timer
 			DateTime end = new DateTime(2023, 02, 22, 15, 00, 00);
 			TimeSpan duration = end - nowTime;
 
-			int durationDay = (end.Day - nowTime.Day) / 24 * 60 * 60;
+			int durationDay = (end.Day - nowTime.Day);
 			int durationHour = (end.Hour - now.Hour) *60 * 60;
 			int durationMin = (end.Minute - now.Minute) * 60;
 			int durationSec = (end.Second - now.Second);
