@@ -11,40 +11,37 @@ namespace Clock_and_Timer
 			timer1.Start();
 		}
 
-		public int timeSpan(int currentTime)
-		{
-			int startTime = currentTime;
-			int endTime = currentTime -= 1000;
-			int seconds = startTime - endTime;
-			return seconds;
-		}
-
 		DateTime now = DateTime.Now;
+		int totalSecondsDuration;
 
-		public void Count_down(DateTime now)
+        public void Count_down(DateTime now)
 		{
 			DateTime nowTime = now;
 			DateTime end = new DateTime(2023, 02, 22, 15, 00, 00);
 			TimeSpan duration = end - nowTime;
 
-			int durationDay = end.Day - now.Day;
-			int durationMin = end.Minute - now.Minute;
-			int durationSec = end.Second - now.Second;
-            int totalTimeRemaining = durationSec + (durationMin * 60) + (durationDay * 60 * 60);
+			int durationDay = (end.Day - nowTime.Day) / 24 * 60 * 60;
+			int durationHour = (end.Hour - now.Hour) *60 * 60;
+			int durationMin = (end.Minute - now.Minute) * 60;
+			int durationSec = (end.Second - now.Second);
+
+			totalSecondsDuration = durationDay + durationHour + durationMin +durationSec;
 
             string remaingTime = durationDay + ":" + durationMin + ":" + durationSec;
 
             secslbl.Text = durationSec.ToString();
             minslbl.Text = durationMin.ToString();
+			hrslbl.Text = durationHour.ToString();
             dayslbl.Text = durationDay.ToString();
+			totalseclbl.Text = totalSecondsDuration.ToString();
 
-            if (totalTimeRemaining == 0)
+            if (totalSecondsDuration == 0)
 			{
 				timer1.Stop();
 			}
-			else if(totalTimeRemaining > 0)
+			else if(totalSecondsDuration > 0)
 			{
-                totalTimeRemaining -= 1;
+                totalSecondsDuration -= 1;
 				CurrentTimeLabel.Text = remaingTime;
 			}
 		}
