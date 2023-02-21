@@ -8,12 +8,6 @@ namespace Clock_and_Timer
 		public Clock()
 		{
 			InitializeComponent();
-			Current_timer();
-		}
-
-		public void Current_timer()
-		{
-			int timeToCountDown;
 			timer1.Start();
 		}
 
@@ -25,22 +19,40 @@ namespace Clock_and_Timer
 			return seconds;
 		}
 
-		public void Count_down(int duration)
+		DateTime now = DateTime.Now;
+
+		public void Count_down(DateTime now)
 		{
-			if(duration == 0)
+			DateTime nowTime = now;
+			DateTime end = new DateTime(2023, 02, 22, 15, 00, 00);
+			TimeSpan duration = end - nowTime;
+
+			int durationDay = end.Day - now.Day;
+			dayslbl.Text = duration.ToString();
+			int durationMin = end.Minute - now.Minute;
+			minslbl.Text = durationMin.ToString();
+			int durationSec = end.Second - now.Second;
+			secslbl.Text = durationSec.ToString();
+			int totalTimeLeft = (durationDay / 24 * 60 * 60) + (durationMin * 60) + (durationSec * 60);
+			int daysLeft = totalTimeLeft % 24;
+			int minutesLeft = (totalTimeLeft - daysLeft) % 60;
+			int secondsLeft = minutesLeft % 60;
+			string remaingTime = daysLeft.ToString() + ":" + minutesLeft.ToString() + ":" + secondsLeft.ToString();
+
+			if(totalTimeLeft == 0)
 			{
 				timer1.Stop();
 			}
-			else if(duration > 0)
+			else if(totalTimeLeft > 0)
 			{
-				duration--;
-				CurrentTimeLabel.Text = duration.ToString();
+				totalTimeLeft -= 1;
+				CurrentTimeLabel.Text = remaingTime;
 			}
 		}
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
-			Count_down();
+			Count_down(now);
 		}
 
 		private void fullScreenButton_Click(object sender, EventArgs e)
@@ -62,15 +74,6 @@ namespace Clock_and_Timer
 		private void exitButton_Click(object sender, EventArgs e)
 		{
 			Close();
-		}
-
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-			if(textBox1 != null)
-			{
-				int duration = int.Parse(textBox1.Text) * 60;
-				timeSpan(duration);
-			}
 		}
 	}
 }

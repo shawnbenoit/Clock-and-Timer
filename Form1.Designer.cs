@@ -34,26 +34,24 @@
 			this.exitButton = new System.Windows.Forms.Button();
 			this.fullScreenButton = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.EnterTimeLabel = new System.Windows.Forms.Button();
-			this.SelectMusicFolder = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.dayslbl = new System.Windows.Forms.Label();
+			this.minslbl = new System.Windows.Forms.Label();
+			this.secslbl = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// CurrentTimeLabel
 			// 
-			this.CurrentTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+			this.CurrentTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.CurrentTimeLabel.AutoSize = true;
 			this.CurrentTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.CurrentTimeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.CurrentTimeLabel.Font = new System.Drawing.Font("Arial", 99.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.CurrentTimeLabel.ForeColor = System.Drawing.Color.White;
-			this.CurrentTimeLabel.Location = new System.Drawing.Point(174, 386);
+			this.CurrentTimeLabel.Location = new System.Drawing.Point(0, 386);
 			this.CurrentTimeLabel.Margin = new System.Windows.Forms.Padding(51);
 			this.CurrentTimeLabel.Name = "CurrentTimeLabel";
-			this.CurrentTimeLabel.Size = new System.Drawing.Size(597, 153);
+			this.CurrentTimeLabel.Size = new System.Drawing.Size(1110, 153);
 			this.CurrentTimeLabel.TabIndex = 0;
 			this.CurrentTimeLabel.Text = "00:00:00";
 			this.CurrentTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,7 +74,7 @@
 			this.exitButton.ForeColor = System.Drawing.Color.DimGray;
 			this.exitButton.Location = new System.Drawing.Point(0, 549);
 			this.exitButton.Name = "exitButton";
-			this.exitButton.Size = new System.Drawing.Size(933, 25);
+			this.exitButton.Size = new System.Drawing.Size(1110, 25);
 			this.exitButton.TabIndex = 1;
 			this.exitButton.Text = "Exit";
 			this.exitButton.UseVisualStyleBackColor = false;
@@ -92,85 +90,68 @@
 			this.fullScreenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.fullScreenButton.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.fullScreenButton.ForeColor = System.Drawing.Color.DimGray;
-			this.fullScreenButton.Location = new System.Drawing.Point(445, 0);
+			this.fullScreenButton.Location = new System.Drawing.Point(0, 1);
 			this.fullScreenButton.Name = "fullScreenButton";
-			this.fullScreenButton.Size = new System.Drawing.Size(488, 29);
+			this.fullScreenButton.Size = new System.Drawing.Size(1110, 29);
 			this.fullScreenButton.TabIndex = 2;
 			this.fullScreenButton.Text = "Fullscreen";
-			this.fullScreenButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.fullScreenButton.UseVisualStyleBackColor = true;
 			this.fullScreenButton.Click += new System.EventHandler(this.fullScreenButton_Click);
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.pictureBox1.ErrorImage = global::Clock_and_Timer.Properties.Resources.Tellepsen_sharepoint_logo;
 			this.pictureBox1.Image = global::Clock_and_Timer.Properties.Resources.Tellepsen_sharepoint_logo;
 			this.pictureBox1.Location = new System.Drawing.Point(0, 28);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(933, 357);
+			this.pictureBox1.Size = new System.Drawing.Size(927, 357);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
 			// 
-			// EnterTimeLabel
+			// dayslbl
 			// 
-			this.EnterTimeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.EnterTimeLabel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.EnterTimeLabel.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-			this.EnterTimeLabel.FlatAppearance.BorderSize = 0;
-			this.EnterTimeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.EnterTimeLabel.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.EnterTimeLabel.ForeColor = System.Drawing.Color.DimGray;
-			this.EnterTimeLabel.Location = new System.Drawing.Point(0, 0);
-			this.EnterTimeLabel.Name = "EnterTimeLabel";
-			this.EnterTimeLabel.Size = new System.Drawing.Size(67, 29);
-			this.EnterTimeLabel.TabIndex = 4;
-			this.EnterTimeLabel.Text = "Enter time";
-			this.EnterTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.EnterTimeLabel.UseVisualStyleBackColor = true;
+			this.dayslbl.AutoSize = true;
+			this.dayslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dayslbl.Location = new System.Drawing.Point(934, 37);
+			this.dayslbl.Name = "dayslbl";
+			this.dayslbl.Size = new System.Drawing.Size(45, 20);
+			this.dayslbl.TabIndex = 4;
+			this.dayslbl.Text = "Days";
 			// 
-			// SelectMusicFolder
+			// minslbl
 			// 
-			this.SelectMusicFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.SelectMusicFolder.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.SelectMusicFolder.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-			this.SelectMusicFolder.FlatAppearance.BorderSize = 0;
-			this.SelectMusicFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.SelectMusicFolder.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.SelectMusicFolder.ForeColor = System.Drawing.Color.DimGray;
-			this.SelectMusicFolder.Location = new System.Drawing.Point(173, 0);
-			this.SelectMusicFolder.Name = "SelectMusicFolder";
-			this.SelectMusicFolder.Size = new System.Drawing.Size(134, 29);
-			this.SelectMusicFolder.TabIndex = 5;
-			this.SelectMusicFolder.Text = "Select Music";
-			this.SelectMusicFolder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.SelectMusicFolder.UseVisualStyleBackColor = true;
+			this.minslbl.AutoSize = true;
+			this.minslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.minslbl.Location = new System.Drawing.Point(933, 68);
+			this.minslbl.Name = "minslbl";
+			this.minslbl.Size = new System.Drawing.Size(65, 20);
+			this.minslbl.TabIndex = 4;
+			this.minslbl.Text = "Minutes";
 			// 
-			// textBox1
+			// secslbl
 			// 
-			this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.ForeColor = System.Drawing.Color.White;
-			this.textBox1.Location = new System.Drawing.Point(70, 6);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(100, 19);
-			this.textBox1.TabIndex = 6;
-			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.secslbl.AutoSize = true;
+			this.secslbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.secslbl.Location = new System.Drawing.Point(933, 103);
+			this.secslbl.Name = "secslbl";
+			this.secslbl.Size = new System.Drawing.Size(65, 20);
+			this.secslbl.TabIndex = 4;
+			this.secslbl.Text = "Minutes";
 			// 
 			// Clock
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.ClientSize = new System.Drawing.Size(933, 574);
-			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.SelectMusicFolder);
-			this.Controls.Add(this.EnterTimeLabel);
+			this.ClientSize = new System.Drawing.Size(1110, 574);
+			this.Controls.Add(this.secslbl);
+			this.Controls.Add(this.minslbl);
+			this.Controls.Add(this.dayslbl);
 			this.Controls.Add(this.fullScreenButton);
 			this.Controls.Add(this.exitButton);
 			this.Controls.Add(this.CurrentTimeLabel);
@@ -194,9 +175,9 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button fullScreenButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Button EnterTimeLabel;
-		private System.Windows.Forms.Button SelectMusicFolder;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Label dayslbl;
+		private System.Windows.Forms.Label minslbl;
+		private System.Windows.Forms.Label secslbl;
 	}
 }
 
