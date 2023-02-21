@@ -28,24 +28,23 @@ namespace Clock_and_Timer
 			TimeSpan duration = end - nowTime;
 
 			int durationDay = end.Day - now.Day;
-			dayslbl.Text = duration.ToString();
 			int durationMin = end.Minute - now.Minute;
-			minslbl.Text = durationMin.ToString();
 			int durationSec = end.Second - now.Second;
-			secslbl.Text = durationSec.ToString();
-			int totalTimeLeft = (durationDay / 24 * 60 * 60) + (durationMin * 60) + (durationSec * 60);
-			int daysLeft = totalTimeLeft % 24;
-			int minutesLeft = (totalTimeLeft - daysLeft) % 60;
-			int secondsLeft = minutesLeft % 60;
-			string remaingTime = daysLeft.ToString() + ":" + minutesLeft.ToString() + ":" + secondsLeft.ToString();
+            int totalTimeRemaining = durationSec + (durationMin * 60) + (durationDay * 60 * 60);
 
-			if(totalTimeLeft == 0)
+            string remaingTime = durationDay + ":" + durationMin + ":" + durationSec;
+
+            secslbl.Text = durationSec.ToString();
+            minslbl.Text = durationMin.ToString();
+            dayslbl.Text = durationDay.ToString();
+
+            if (totalTimeRemaining == 0)
 			{
 				timer1.Stop();
 			}
-			else if(totalTimeLeft > 0)
+			else if(totalTimeRemaining > 0)
 			{
-				totalTimeLeft -= 1;
+                totalTimeRemaining -= 1;
 				CurrentTimeLabel.Text = remaingTime;
 			}
 		}
