@@ -18,7 +18,6 @@ namespace Clock_and_Timer
 
 			TimeSpan T = endTime - nowTime;
 
-			//string remainingTime = string.Format("{0:%d}:{1:%d}:{2:%d}", T.Hours, T.Minutes, T.Seconds);
 			string remainingTime = string.Format("{0:hh\\:mm\\:ss}", T);
 
 			if(T.Hours == 0 && T.Minutes == 0 && T.Seconds == 0)
