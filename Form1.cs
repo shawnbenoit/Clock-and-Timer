@@ -24,7 +24,7 @@ namespace Clock_and_Timer
 			if(T.Hours == 0 && T.Minutes == 0 && T.Seconds == 0)
 			{
 				timer1.Stop();
-				CurrentTimeLabel.Text = "Time's Up!";
+				CurrentTimeLabel.Text = "It is 3:00 PM.";
 			}
 			else
 			{
