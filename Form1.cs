@@ -15,7 +15,7 @@ namespace Clock_and_Timer
 		public void Count_down(DateTime now)
 		{
 			DateTime nowTime = now;
-			DateTime endTime = new DateTime(2023, 02, 22, 15, 00, 00);
+			DateTime endTime = new DateTime(2023, 02, 22, 15, 05, 00);
 
 			TimeSpan T = endTime - nowTime;
 
