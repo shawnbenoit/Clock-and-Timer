@@ -11,43 +11,30 @@ namespace Clock_and_Timer
 			timer1.Start();
 		}
 
-		DateTime now = DateTime.Now;
-		int totalSecondsDuration;
-
-        public void Count_down(DateTime now)
+		public void Count_down(DateTime now)
 		{
 			DateTime nowTime = now;
-			DateTime end = new DateTime(2023, 02, 22, 15, 00, 00);
-			TimeSpan duration = end - nowTime;
+			DateTime endTime = new DateTime(2023, 02, 22, 15, 00, 00);
 
-			int durationDay = (end.Day - nowTime.Day);
-			int durationHour = (end.Hour - now.Hour);
-			int durationMin = (end.Minute - now.Minute);
-			int durationSec = (end.Second - now.Second);
+			TimeSpan T = endTime - nowTime;
 
-			totalSecondsDuration = durationDay + durationHour + durationMin +durationSec;
+			//string remainingTime = string.Format("{0:%d}:{1:%d}:{2:%d}", T.Hours, T.Minutes, T.Seconds);
+			string remainingTime = string.Format("{0:hh\\:mm\\:ss}", T);
 
-            string remaingTime = durationDay + ":" + durationMin + ":" + durationSec;
-
-            secslbl.Text = durationSec.ToString();
-            minslbl.Text = durationMin.ToString();
-			hrslbl.Text = durationHour.ToString();
-            dayslbl.Text = durationDay.ToString();
-			totalseclbl.Text = totalSecondsDuration.ToString();
-
-            if (totalSecondsDuration == 0)
+			if(T.Hours == 0 && T.Minutes == 0 && T.Seconds == 0)
 			{
 				timer1.Stop();
+				CurrentTimeLabel.Text = "Time's Up!";
 			}
-			else if(totalSecondsDuration > 0)
+			else
 			{
-                totalSecondsDuration -= 1;
-				CurrentTimeLabel.Text = remaingTime;
+				CurrentTimeLabel.Text = remainingTime;
 			}
 		}
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
+			DateTime now = DateTime.Now;
 			Count_down(now);
 		}
 
