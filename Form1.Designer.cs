@@ -53,6 +53,9 @@
 			this.CurrentTimeLabel.Size = new System.Drawing.Size(853, 132);
 			this.CurrentTimeLabel.TabIndex = 0;
 			this.CurrentTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.CurrentTimeLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
+			this.CurrentTimeLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this._MouseMove);
+			this.CurrentTimeLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this._MouseUp);
 			// 
 			// timer1
 			// 
@@ -77,6 +80,9 @@
 			this.exitButton.Text = "Exit";
 			this.exitButton.UseVisualStyleBackColor = false;
 			this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+			this.exitButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
+			this.exitButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this._MouseMove);
+			this.exitButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this._MouseUp);
 			// 
 			// fullScreenButton
 			// 
@@ -95,6 +101,9 @@
 			this.fullScreenButton.Text = "Fullscreen";
 			this.fullScreenButton.UseVisualStyleBackColor = true;
 			this.fullScreenButton.Click += new System.EventHandler(this.fullScreenButton_Click);
+			this.fullScreenButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
+			this.fullScreenButton.MouseMove += new System.Windows.Forms.MouseEventHandler(this._MouseMove);
+			this.fullScreenButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this._MouseUp);
 			// 
 			// pictureBox1
 			// 
@@ -110,6 +119,9 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
+			this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this._MouseMove);
+			this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this._MouseUp);
 			// 
 			// titleLabel
 			// 
@@ -124,6 +136,9 @@
 			this.titleLabel.TabIndex = 4;
 			this.titleLabel.Text = "Time until we start: ";
 			this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.titleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
+			this.titleLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this._MouseMove);
+			this.titleLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this._MouseUp);
 			// 
 			// Clock
 			// 
