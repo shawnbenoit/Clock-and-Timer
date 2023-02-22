@@ -35,6 +35,7 @@
 			this.exitButton = new System.Windows.Forms.Button();
 			this.fullScreenButton = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.titleLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -46,10 +47,10 @@
 			this.CurrentTimeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.CurrentTimeLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 80.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.CurrentTimeLabel.ForeColor = System.Drawing.Color.White;
-			this.CurrentTimeLabel.Location = new System.Drawing.Point(0, 386);
+			this.CurrentTimeLabel.Location = new System.Drawing.Point(0, 407);
 			this.CurrentTimeLabel.Margin = new System.Windows.Forms.Padding(51);
 			this.CurrentTimeLabel.Name = "CurrentTimeLabel";
-			this.CurrentTimeLabel.Size = new System.Drawing.Size(853, 153);
+			this.CurrentTimeLabel.Size = new System.Drawing.Size(853, 132);
 			this.CurrentTimeLabel.TabIndex = 0;
 			this.CurrentTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
@@ -105,10 +106,24 @@
 			this.pictureBox1.Image = global::Clock_and_Timer.Properties.Resources.Tellepsen_sharepoint_logo;
 			this.pictureBox1.Location = new System.Drawing.Point(0, 28);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(853, 357);
+			this.pictureBox1.Size = new System.Drawing.Size(853, 263);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
+			// 
+			// titleLabel
+			// 
+			this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.titleLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.titleLabel.ForeColor = System.Drawing.Color.White;
+			this.titleLabel.Location = new System.Drawing.Point(0, 294);
+			this.titleLabel.Margin = new System.Windows.Forms.Padding(0);
+			this.titleLabel.Name = "titleLabel";
+			this.titleLabel.Size = new System.Drawing.Size(853, 107);
+			this.titleLabel.TabIndex = 4;
+			this.titleLabel.Text = "Time until we start: ";
+			this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// Clock
 			// 
@@ -116,6 +131,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(853, 574);
+			this.Controls.Add(this.titleLabel);
 			this.Controls.Add(this.fullScreenButton);
 			this.Controls.Add(this.exitButton);
 			this.Controls.Add(this.CurrentTimeLabel);
@@ -126,7 +142,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(51, 46, 51, 46);
 			this.Name = "Clock";
-			this.Text = "ClockandTimer";
+			this.Text = "Timer";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
@@ -138,6 +154,7 @@
         private System.Windows.Forms.Button fullScreenButton;
         private System.Windows.Forms.PictureBox pictureBox1;
 		public System.Windows.Forms.Label CurrentTimeLabel;
+		private System.Windows.Forms.Label titleLabel;
 	}
 }
 
