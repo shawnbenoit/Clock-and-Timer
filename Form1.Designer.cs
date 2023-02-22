@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clock));
 			this.CurrentTimeLabel = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.exitButton = new System.Windows.Forms.Button();
@@ -43,7 +44,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.CurrentTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.CurrentTimeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.CurrentTimeLabel.Font = new System.Drawing.Font("Arial", 75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.CurrentTimeLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 80.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.CurrentTimeLabel.ForeColor = System.Drawing.Color.White;
 			this.CurrentTimeLabel.Location = new System.Drawing.Point(0, 386);
 			this.CurrentTimeLabel.Margin = new System.Windows.Forms.Padding(51);
@@ -122,6 +123,7 @@
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 128F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.ForeColor = System.Drawing.SystemColors.Highlight;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(51, 46, 51, 46);
 			this.Name = "Clock";
 			this.Text = "ClockandTimer";
