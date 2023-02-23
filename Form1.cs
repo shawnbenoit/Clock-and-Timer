@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 
+using Microsoft.WindowsAPICodePack.Dialogs;
+
 namespace Clock_and_Timer
 {
 	public partial class Clock : Form
@@ -84,5 +86,40 @@ namespace Clock_and_Timer
 			Close();
 		}
 
+		public void SelectFolder(string path)
+		{
+			string dirpath = path;
+			CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+
+			if(path == null || path == "")
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+			}
+			else if(path == "MyPictures")
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+			}
+			else if(path == "MyMusic")
+			{
+				dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+			}
+
+			dialog.IsFolderPicker = true;
+			if(dialog.ShowDialog() == CommonFileDialogResult.Ok)
+			{
+				// call respective function here
+				MessageBox.Show("You selected: " + dialog.FileName);
+			}
+		}
+
+		private void musicfolder_Click(object sender, EventArgs e)
+		{
+			SelectFolder("MyMusic");
+		}
+
+		private void picturefolder_Click(object sender, EventArgs e)
+		{
+			SelectFolder("MyPictures");
+		}
 	}
 }

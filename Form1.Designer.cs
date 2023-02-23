@@ -140,7 +140,7 @@
 			this.titleLabel.Name = "titleLabel";
 			this.titleLabel.Size = new System.Drawing.Size(853, 52);
 			this.titleLabel.TabIndex = 4;
-			this.titleLabel.Text = "Time until we start: ";
+			this.titleLabel.Text = "Event begins in: ";
 			this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.titleLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
 			this.titleLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this._MouseMove);
@@ -161,6 +161,7 @@
 			this.musicfolder.TabIndex = 5;
 			this.musicfolder.Text = "Music";
 			this.musicfolder.UseVisualStyleBackColor = false;
+			this.musicfolder.Click += new System.EventHandler(this.musicfolder_Click);
 			// 
 			// picturefolder
 			// 
@@ -177,6 +178,7 @@
 			this.picturefolder.TabIndex = 6;
 			this.picturefolder.Text = "Pictures";
 			this.picturefolder.UseVisualStyleBackColor = false;
+			this.picturefolder.Click += new System.EventHandler(this.picturefolder_Click);
 			// 
 			// picturetitlelabel
 			// 
@@ -187,9 +189,12 @@
 			this.picturetitlelabel.Location = new System.Drawing.Point(0, 371);
 			this.picturetitlelabel.Margin = new System.Windows.Forms.Padding(0);
 			this.picturetitlelabel.Name = "picturetitlelabel";
-			this.picturetitlelabel.Size = new System.Drawing.Size(853, 35);
+			this.picturetitlelabel.Size = new System.Drawing.Size(852, 35);
 			this.picturetitlelabel.TabIndex = 7;
 			this.picturetitlelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.picturetitlelabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this._MouseDown);
+			this.picturetitlelabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this._MouseMove);
+			this.picturetitlelabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this._MouseUp);
 			// 
 			// pictureBox2
 			// 
