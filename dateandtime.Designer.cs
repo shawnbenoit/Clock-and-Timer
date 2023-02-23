@@ -35,22 +35,23 @@
 			// 
 			// setdateandtime
 			// 
-			this.setdateandtime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.setdateandtime.BackColor = System.Drawing.Color.LightSlateGray;
+			this.setdateandtime.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.setdateandtime.FlatAppearance.BorderSize = 0;
 			this.setdateandtime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.setdateandtime.ForeColor = System.Drawing.Color.DimGray;
-			this.setdateandtime.Location = new System.Drawing.Point(1, 156);
+			this.setdateandtime.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.setdateandtime.Location = new System.Drawing.Point(0, 157);
 			this.setdateandtime.Name = "setdateandtime";
-			this.setdateandtime.Size = new System.Drawing.Size(358, 32);
+			this.setdateandtime.Size = new System.Drawing.Size(359, 32);
 			this.setdateandtime.TabIndex = 0;
 			this.setdateandtime.Text = "Okay";
-			this.setdateandtime.UseVisualStyleBackColor = true;
+			this.setdateandtime.UseVisualStyleBackColor = false;
 			this.setdateandtime.Click += new System.EventHandler(this.setdateandtime_Click);
 			// 
 			// timePicker
 			// 
-			this.timePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.timePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.timePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.timePicker.Location = new System.Drawing.Point(237, 12);
@@ -62,7 +63,8 @@
 			// 
 			// datePicker
 			// 
-			this.datePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.datePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.datePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.datePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
@@ -81,7 +83,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.BackColor = System.Drawing.Color.LightSteelBlue;
 			this.ClientSize = new System.Drawing.Size(359, 189);
 			this.Controls.Add(this.timePicker);
 			this.Controls.Add(this.datePicker);

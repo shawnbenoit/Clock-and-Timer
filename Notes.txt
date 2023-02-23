@@ -14,3 +14,6 @@
 			{
 				DateTime startDate = new DateTime();
 			}
+
+go here for forms traversal
+https://stackoverflow.com/questions/7969582/how-to-update-textbox-in-form1-from-form2/7971828#7971828

@@ -124,7 +124,8 @@ namespace Clock_and_Timer
 
 		private void datetimepicker_Click(object sender, EventArgs e)
 		{
-
+			dateandtime popupwinform = new dateandtime();
+			popupwinform.Show();
 		}
 	}
 }

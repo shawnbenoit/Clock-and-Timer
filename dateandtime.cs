@@ -22,7 +22,7 @@ namespace Clock_and_Timer
 
 		private void setdateandtime_Click(object sender, EventArgs e)
 		{
-
+			Close();
 		}
 	}
 }
