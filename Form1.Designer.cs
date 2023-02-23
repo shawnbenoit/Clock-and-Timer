@@ -45,8 +45,6 @@
 			this.playbutton = new System.Windows.Forms.Button();
 			this.pausebutton = new System.Windows.Forms.Button();
 			this.randombutton = new System.Windows.Forms.Button();
-			this.datePicker = new System.Windows.Forms.DateTimePicker();
-			this.timePicker = new System.Windows.Forms.DateTimePicker();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -299,39 +297,12 @@
 			this.randombutton.Text = "Random";
 			this.randombutton.UseVisualStyleBackColor = false;
 			// 
-			// datePicker
-			// 
-			this.datePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.datePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.datePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.datePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.datePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.datePicker.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.datePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.datePicker.Location = new System.Drawing.Point(1, 554);
-			this.datePicker.Name = "datePicker";
-			this.datePicker.Size = new System.Drawing.Size(53, 20);
-			this.datePicker.TabIndex = 13;
-			this.datePicker.Visible = false;
-			// 
-			// timePicker
-			// 
-			this.timePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.timePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.timePicker.Location = new System.Drawing.Point(60, 554);
-			this.timePicker.Name = "timePicker";
-			this.timePicker.Size = new System.Drawing.Size(57, 20);
-			this.timePicker.TabIndex = 14;
-			this.timePicker.Visible = false;
-			// 
 			// Clock
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(853, 574);
-			this.Controls.Add(this.timePicker);
-			this.Controls.Add(this.datePicker);
 			this.Controls.Add(this.randombutton);
 			this.Controls.Add(this.pausebutton);
 			this.Controls.Add(this.playbutton);
@@ -379,8 +350,6 @@
 		private System.Windows.Forms.Button playbutton;
 		private System.Windows.Forms.Button pausebutton;
 		private System.Windows.Forms.Button randombutton;
-		private System.Windows.Forms.DateTimePicker datePicker;
-		private System.Windows.Forms.DateTimePicker timePicker;
 	}
 }
 
