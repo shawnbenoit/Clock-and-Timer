@@ -125,7 +125,11 @@ namespace Clock_and_Timer
 		private void datetimepicker_Click(object sender, EventArgs e)
 		{
 			datePicker.Format = DateTimePickerFormat.Custom;
-			datePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+			datePicker.CustomFormat = "MM/dd/yyyy";
+
+			timePicker.Format = DateTimePickerFormat.Custom;
+			timePicker.CustomFormat = "MM/dd/yyyy";
+
 
 			var picker = new DateTimePicker();
 			Form f = new Form();

@@ -46,7 +46,7 @@
 			this.pausebutton = new System.Windows.Forms.Button();
 			this.randombutton = new System.Windows.Forms.Button();
 			this.datePicker = new System.Windows.Forms.DateTimePicker();
-			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+			this.timePicker = new System.Windows.Forms.DateTimePicker();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -314,15 +314,15 @@
 			this.datePicker.TabIndex = 13;
 			this.datePicker.Visible = false;
 			// 
-			// dateTimePicker2
+			// timePicker
 			// 
-			this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dateTimePicker2.Location = new System.Drawing.Point(60, 554);
-			this.dateTimePicker2.Name = "dateTimePicker2";
-			this.dateTimePicker2.Size = new System.Drawing.Size(57, 20);
-			this.dateTimePicker2.TabIndex = 14;
-			this.dateTimePicker2.Visible = false;
+			this.timePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.timePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.timePicker.Location = new System.Drawing.Point(60, 554);
+			this.timePicker.Name = "timePicker";
+			this.timePicker.Size = new System.Drawing.Size(57, 20);
+			this.timePicker.TabIndex = 14;
+			this.timePicker.Visible = false;
 			// 
 			// Clock
 			// 
@@ -330,7 +330,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(853, 574);
-			this.Controls.Add(this.dateTimePicker2);
+			this.Controls.Add(this.timePicker);
 			this.Controls.Add(this.datePicker);
 			this.Controls.Add(this.randombutton);
 			this.Controls.Add(this.pausebutton);
@@ -346,8 +346,8 @@
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.pictureBox3);
-			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 128F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.ForeColor = System.Drawing.SystemColors.Highlight;
+			this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(51, 46, 51, 46);
@@ -380,7 +380,7 @@
 		private System.Windows.Forms.Button pausebutton;
 		private System.Windows.Forms.Button randombutton;
 		private System.Windows.Forms.DateTimePicker datePicker;
-		private System.Windows.Forms.DateTimePicker dateTimePicker2;
+		private System.Windows.Forms.DateTimePicker timePicker;
 	}
 }
 
