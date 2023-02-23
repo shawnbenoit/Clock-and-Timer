@@ -42,6 +42,11 @@
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.datetimepicker = new System.Windows.Forms.Button();
+			this.playbutton = new System.Windows.Forms.Button();
+			this.pausebutton = new System.Windows.Forms.Button();
+			this.randombutton = new System.Windows.Forms.Button();
+			this.datePicker = new System.Windows.Forms.DateTimePicker();
+			this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -80,9 +85,9 @@
 			this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.exitButton.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.exitButton.ForeColor = System.Drawing.Color.DimGray;
-			this.exitButton.Location = new System.Drawing.Point(647, 0);
+			this.exitButton.Location = new System.Drawing.Point(712, 0);
 			this.exitButton.Name = "exitButton";
-			this.exitButton.Size = new System.Drawing.Size(100, 25);
+			this.exitButton.Size = new System.Drawing.Size(55, 25);
 			this.exitButton.TabIndex = 1;
 			this.exitButton.Text = "Exit";
 			this.exitButton.UseVisualStyleBackColor = false;
@@ -100,9 +105,9 @@
 			this.fullScreenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.fullScreenButton.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.fullScreenButton.ForeColor = System.Drawing.Color.DimGray;
-			this.fullScreenButton.Location = new System.Drawing.Point(753, 0);
+			this.fullScreenButton.Location = new System.Drawing.Point(773, 0);
 			this.fullScreenButton.Name = "fullScreenButton";
-			this.fullScreenButton.Size = new System.Drawing.Size(100, 25);
+			this.fullScreenButton.Size = new System.Drawing.Size(80, 25);
 			this.fullScreenButton.TabIndex = 2;
 			this.fullScreenButton.Text = "Fullscreen";
 			this.fullScreenButton.UseVisualStyleBackColor = true;
@@ -155,9 +160,9 @@
 			this.musicfolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.musicfolder.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.musicfolder.ForeColor = System.Drawing.Color.DimGray;
-			this.musicfolder.Location = new System.Drawing.Point(0, 0);
+			this.musicfolder.Location = new System.Drawing.Point(167, 0);
 			this.musicfolder.Name = "musicfolder";
-			this.musicfolder.Size = new System.Drawing.Size(100, 25);
+			this.musicfolder.Size = new System.Drawing.Size(55, 25);
 			this.musicfolder.TabIndex = 5;
 			this.musicfolder.Text = "Music";
 			this.musicfolder.UseVisualStyleBackColor = false;
@@ -174,7 +179,7 @@
 			this.picturefolder.ForeColor = System.Drawing.Color.DimGray;
 			this.picturefolder.Location = new System.Drawing.Point(106, 0);
 			this.picturefolder.Name = "picturefolder";
-			this.picturefolder.Size = new System.Drawing.Size(100, 25);
+			this.picturefolder.Size = new System.Drawing.Size(55, 25);
 			this.picturefolder.TabIndex = 6;
 			this.picturefolder.Text = "Pictures";
 			this.picturefolder.UseVisualStyleBackColor = false;
@@ -235,12 +240,89 @@
 			this.datetimepicker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.datetimepicker.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.datetimepicker.ForeColor = System.Drawing.Color.DimGray;
-			this.datetimepicker.Location = new System.Drawing.Point(212, 0);
+			this.datetimepicker.Location = new System.Drawing.Point(0, 0);
 			this.datetimepicker.Name = "datetimepicker";
 			this.datetimepicker.Size = new System.Drawing.Size(100, 25);
 			this.datetimepicker.TabIndex = 10;
 			this.datetimepicker.Text = "Date and Time";
 			this.datetimepicker.UseVisualStyleBackColor = false;
+			this.datetimepicker.Click += new System.EventHandler(this.datetimepicker_Click);
+			// 
+			// playbutton
+			// 
+			this.playbutton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.playbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.playbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.playbutton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.playbutton.FlatAppearance.BorderSize = 0;
+			this.playbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.playbutton.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.playbutton.ForeColor = System.Drawing.Color.DimGray;
+			this.playbutton.Location = new System.Drawing.Point(339, 0);
+			this.playbutton.Name = "playbutton";
+			this.playbutton.Size = new System.Drawing.Size(55, 25);
+			this.playbutton.TabIndex = 11;
+			this.playbutton.Text = "Play";
+			this.playbutton.UseVisualStyleBackColor = false;
+			// 
+			// pausebutton
+			// 
+			this.pausebutton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.pausebutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.pausebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.pausebutton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.pausebutton.FlatAppearance.BorderSize = 0;
+			this.pausebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.pausebutton.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.pausebutton.ForeColor = System.Drawing.Color.DimGray;
+			this.pausebutton.Location = new System.Drawing.Point(400, 0);
+			this.pausebutton.Name = "pausebutton";
+			this.pausebutton.Size = new System.Drawing.Size(55, 25);
+			this.pausebutton.TabIndex = 11;
+			this.pausebutton.Text = "Pause";
+			this.pausebutton.UseVisualStyleBackColor = false;
+			// 
+			// randombutton
+			// 
+			this.randombutton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+			this.randombutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.randombutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.randombutton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.randombutton.FlatAppearance.BorderSize = 0;
+			this.randombutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.randombutton.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.randombutton.ForeColor = System.Drawing.Color.DimGray;
+			this.randombutton.Location = new System.Drawing.Point(461, 0);
+			this.randombutton.Name = "randombutton";
+			this.randombutton.Size = new System.Drawing.Size(55, 25);
+			this.randombutton.TabIndex = 12;
+			this.randombutton.Text = "Random";
+			this.randombutton.UseVisualStyleBackColor = false;
+			// 
+			// datePicker
+			// 
+			this.datePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.datePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.datePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.datePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.datePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.datePicker.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.datePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.datePicker.Location = new System.Drawing.Point(1, 554);
+			this.datePicker.Name = "datePicker";
+			this.datePicker.Size = new System.Drawing.Size(53, 20);
+			this.datePicker.TabIndex = 13;
+			this.datePicker.Visible = false;
+			// 
+			// dateTimePicker2
+			// 
+			this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dateTimePicker2.Location = new System.Drawing.Point(60, 554);
+			this.dateTimePicker2.Name = "dateTimePicker2";
+			this.dateTimePicker2.Size = new System.Drawing.Size(57, 20);
+			this.dateTimePicker2.TabIndex = 14;
+			this.dateTimePicker2.Visible = false;
 			// 
 			// Clock
 			// 
@@ -248,6 +330,11 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(853, 574);
+			this.Controls.Add(this.dateTimePicker2);
+			this.Controls.Add(this.datePicker);
+			this.Controls.Add(this.randombutton);
+			this.Controls.Add(this.pausebutton);
+			this.Controls.Add(this.playbutton);
 			this.Controls.Add(this.datetimepicker);
 			this.Controls.Add(this.picturetitlelabel);
 			this.Controls.Add(this.picturefolder);
@@ -289,6 +376,11 @@
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Button datetimepicker;
+		private System.Windows.Forms.Button playbutton;
+		private System.Windows.Forms.Button pausebutton;
+		private System.Windows.Forms.Button randombutton;
+		private System.Windows.Forms.DateTimePicker datePicker;
+		private System.Windows.Forms.DateTimePicker dateTimePicker2;
 	}
 }
 
