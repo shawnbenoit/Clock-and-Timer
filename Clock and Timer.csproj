@@ -27,7 +27,7 @@
     <TargetCulture>en</TargetCulture>
     <ProductName>Timer</ProductName>
     <PublisherName>Shawn Benoit</PublisherName>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
