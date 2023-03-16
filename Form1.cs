@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -8,10 +10,20 @@ namespace Clock_and_Timer
 {
 	public partial class Clock : Form
 	{
+		List<string> filteredFiles;
+		FolderBrowserDialog pictureFolder = new FolderBrowserDialog();
+		FolderBrowserDialog musicFolder = new FolderBrowserDialog();
+
+		int picCount = -1;
+		bool picListIsPlaying = false;
+
+		int musicCount = 0;
+		bool musicListIsPlaying = false;
+
 		public Clock()
 		{
 			InitializeComponent();
-			timer1.Start();
+			countDownTimer.Start();
 		}
 
 		public void Count_down(DateTime now)
@@ -25,7 +37,7 @@ namespace Clock_and_Timer
 
 			if(T.Hours == 0 && T.Minutes == 0 && T.Seconds == 0)
 			{
-				timer1.Stop();
+				countDownTimer.Stop();
 				CurrentTimeLabel.Text = "It is 3:00 PM.";
 			}
 			else
@@ -119,13 +131,11 @@ namespace Clock_and_Timer
 
 		private void picturefolder_Click(object sender, EventArgs e)
 		{
+			picCount = -1;
+			picListIsPlaying = false;
+			slideShowTimer.Stop();
 			SelectFolder("MyPictures");
-		}
-
-		private void datetimepicker_Click(object sender, EventArgs e)
-		{
-			dateandtime popupwinform = new dateandtime();
-			popupwinform.Show();
+			DialogResult pictures = FolderBrowser.ShowDialog();
 		}
 	}
 }

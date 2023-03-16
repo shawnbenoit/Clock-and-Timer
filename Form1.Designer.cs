@@ -31,7 +31,7 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clock));
 			this.CurrentTimeLabel = new System.Windows.Forms.Label();
-			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.countDownTimer = new System.Windows.Forms.Timer(this.components);
 			this.exitButton = new System.Windows.Forms.Button();
 			this.fullScreenButton = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +45,7 @@
 			this.playbutton = new System.Windows.Forms.Button();
 			this.pausebutton = new System.Windows.Forms.Button();
 			this.randombutton = new System.Windows.Forms.Button();
+			this.slideShowTimer = new System.Windows.Forms.Timer(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -68,10 +69,10 @@
 			this.CurrentTimeLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this._MouseMove);
 			this.CurrentTimeLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this._MouseUp);
 			// 
-			// timer1
+			// countDownTimer
 			// 
-			this.timer1.Interval = 1000;
-			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+			this.countDownTimer.Interval = 1000;
+			this.countDownTimer.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
 			// exitButton
 			// 
@@ -244,7 +245,6 @@
 			this.datetimepicker.TabIndex = 10;
 			this.datetimepicker.Text = "Date and Time";
 			this.datetimepicker.UseVisualStyleBackColor = false;
-			this.datetimepicker.Click += new System.EventHandler(this.datetimepicker_Click);
 			// 
 			// playbutton
 			// 
@@ -335,7 +335,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer countDownTimer;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button fullScreenButton;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -350,6 +350,7 @@
 		private System.Windows.Forms.Button playbutton;
 		private System.Windows.Forms.Button pausebutton;
 		private System.Windows.Forms.Button randombutton;
+		private System.Windows.Forms.Timer slideShowTimer;
 	}
 }
 
