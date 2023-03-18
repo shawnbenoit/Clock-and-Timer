@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -17,8 +16,10 @@ namespace Clock_and_Timer
 		int picCount = -1;
 		bool picListIsPlaying = false;
 
-		int musicCount = 0;
+		int musicCount = -1;
 		bool musicListIsPlaying = false;
+
+		TimeSpan timeSpan = TimeSpan.Zero;
 
 		public Clock()
 		{
@@ -135,7 +136,12 @@ namespace Clock_and_Timer
 			picListIsPlaying = false;
 			slideShowTimer.Stop();
 			SelectFolder("MyPictures");
-			DialogResult pictures = FolderBrowser.ShowDialog();
+			//DialogResult pictures = FolderBrowser.ShowDialog();
+		}
+
+		private void datetimepicker_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

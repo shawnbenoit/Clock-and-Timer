@@ -41,11 +41,12 @@
 			this.picturetitlelabel = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
-			this.datetimepicker = new System.Windows.Forms.Button();
 			this.playbutton = new System.Windows.Forms.Button();
 			this.pausebutton = new System.Windows.Forms.Button();
 			this.randombutton = new System.Windows.Forms.Button();
 			this.slideShowTimer = new System.Windows.Forms.Timer(this.components);
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.datetimepicker = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -230,22 +231,6 @@
 			this.pictureBox3.TabIndex = 9;
 			this.pictureBox3.TabStop = false;
 			// 
-			// datetimepicker
-			// 
-			this.datetimepicker.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.datetimepicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.datetimepicker.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-			this.datetimepicker.FlatAppearance.BorderSize = 0;
-			this.datetimepicker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.datetimepicker.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.datetimepicker.ForeColor = System.Drawing.Color.DimGray;
-			this.datetimepicker.Location = new System.Drawing.Point(0, 0);
-			this.datetimepicker.Name = "datetimepicker";
-			this.datetimepicker.Size = new System.Drawing.Size(100, 25);
-			this.datetimepicker.TabIndex = 10;
-			this.datetimepicker.Text = "Date and Time";
-			this.datetimepicker.UseVisualStyleBackColor = false;
-			// 
 			// playbutton
 			// 
 			this.playbutton.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -297,12 +282,44 @@
 			this.randombutton.Text = "Random";
 			this.randombutton.UseVisualStyleBackColor = false;
 			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.DimGray;
+			this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.DimGray;
+			this.dateTimePicker1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+			this.dateTimePicker1.Location = new System.Drawing.Point(0, 25);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.ShowUpDown = true;
+			this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+			this.dateTimePicker1.TabIndex = 13;
+			// 
+			// datetimepicker
+			// 
+			this.datetimepicker.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.datetimepicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
+			this.datetimepicker.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+			this.datetimepicker.FlatAppearance.BorderSize = 0;
+			this.datetimepicker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.datetimepicker.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.datetimepicker.ForeColor = System.Drawing.Color.DimGray;
+			this.datetimepicker.Location = new System.Drawing.Point(0, 0);
+			this.datetimepicker.Name = "datetimepicker";
+			this.datetimepicker.Size = new System.Drawing.Size(100, 25);
+			this.datetimepicker.TabIndex = 10;
+			this.datetimepicker.Text = "Date and Time";
+			this.datetimepicker.UseVisualStyleBackColor = false;
+			this.datetimepicker.Click += new System.EventHandler(this.datetimepicker_Click);
+			// 
 			// Clock
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(853, 574);
+			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.randombutton);
 			this.Controls.Add(this.pausebutton);
 			this.Controls.Add(this.playbutton);
@@ -346,11 +363,12 @@
 		private System.Windows.Forms.Label picturetitlelabel;
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.PictureBox pictureBox3;
-		private System.Windows.Forms.Button datetimepicker;
 		private System.Windows.Forms.Button playbutton;
 		private System.Windows.Forms.Button pausebutton;
 		private System.Windows.Forms.Button randombutton;
 		private System.Windows.Forms.Timer slideShowTimer;
+		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.Button datetimepicker;
 	}
 }
 
