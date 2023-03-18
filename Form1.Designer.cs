@@ -45,7 +45,6 @@
 			this.pausebutton = new System.Windows.Forms.Button();
 			this.randombutton = new System.Windows.Forms.Button();
 			this.slideShowTimer = new System.Windows.Forms.Timer(this.components);
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.datetimepicker = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,7 +84,7 @@
 			this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.exitButton.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.exitButton.ForeColor = System.Drawing.Color.DimGray;
-			this.exitButton.Location = new System.Drawing.Point(712, 0);
+			this.exitButton.Location = new System.Drawing.Point(723, 0);
 			this.exitButton.Name = "exitButton";
 			this.exitButton.Size = new System.Drawing.Size(55, 25);
 			this.exitButton.TabIndex = 1;
@@ -160,11 +159,13 @@
 			this.musicfolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.musicfolder.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.musicfolder.ForeColor = System.Drawing.Color.DimGray;
-			this.musicfolder.Location = new System.Drawing.Point(167, 0);
+			this.musicfolder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.musicfolder.Location = new System.Drawing.Point(169, 3);
 			this.musicfolder.Name = "musicfolder";
 			this.musicfolder.Size = new System.Drawing.Size(55, 25);
 			this.musicfolder.TabIndex = 5;
 			this.musicfolder.Text = "Music";
+			this.musicfolder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.musicfolder.UseVisualStyleBackColor = false;
 			this.musicfolder.Click += new System.EventHandler(this.musicfolder_Click);
 			// 
@@ -177,11 +178,13 @@
 			this.picturefolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.picturefolder.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.picturefolder.ForeColor = System.Drawing.Color.DimGray;
-			this.picturefolder.Location = new System.Drawing.Point(106, 0);
+			this.picturefolder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.picturefolder.Location = new System.Drawing.Point(108, 3);
 			this.picturefolder.Name = "picturefolder";
 			this.picturefolder.Size = new System.Drawing.Size(55, 25);
 			this.picturefolder.TabIndex = 6;
 			this.picturefolder.Text = "Pictures";
+			this.picturefolder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.picturefolder.UseVisualStyleBackColor = false;
 			this.picturefolder.Click += new System.EventHandler(this.picturefolder_Click);
 			// 
@@ -282,20 +285,6 @@
 			this.randombutton.Text = "Random";
 			this.randombutton.UseVisualStyleBackColor = false;
 			// 
-			// dateTimePicker1
-			// 
-			this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.DimGray;
-			this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
-			this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.DimGray;
-			this.dateTimePicker1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-			this.dateTimePicker1.Location = new System.Drawing.Point(0, 25);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.ShowUpDown = true;
-			this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-			this.dateTimePicker1.TabIndex = 13;
-			// 
 			// datetimepicker
 			// 
 			this.datetimepicker.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -305,11 +294,13 @@
 			this.datetimepicker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.datetimepicker.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.datetimepicker.ForeColor = System.Drawing.Color.DimGray;
-			this.datetimepicker.Location = new System.Drawing.Point(0, 0);
+			this.datetimepicker.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.datetimepicker.Location = new System.Drawing.Point(2, 3);
 			this.datetimepicker.Name = "datetimepicker";
 			this.datetimepicker.Size = new System.Drawing.Size(100, 25);
 			this.datetimepicker.TabIndex = 10;
 			this.datetimepicker.Text = "Date and Time";
+			this.datetimepicker.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.datetimepicker.UseVisualStyleBackColor = false;
 			this.datetimepicker.Click += new System.EventHandler(this.datetimepicker_Click);
 			// 
@@ -319,7 +310,6 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(58)))));
 			this.ClientSize = new System.Drawing.Size(853, 574);
-			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.randombutton);
 			this.Controls.Add(this.pausebutton);
 			this.Controls.Add(this.playbutton);
@@ -367,7 +357,6 @@
 		private System.Windows.Forms.Button pausebutton;
 		private System.Windows.Forms.Button randombutton;
 		private System.Windows.Forms.Timer slideShowTimer;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
 		private System.Windows.Forms.Button datetimepicker;
 	}
 }
