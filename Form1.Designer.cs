@@ -1,4 +1,5 @@
-﻿namespace Clock_and_Timer
+﻿using Clock_and_Timer.CustomDatePicker;
+namespace Clock_and_Timer
 {
     partial class Clock
     {

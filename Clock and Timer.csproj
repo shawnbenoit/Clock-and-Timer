@@ -93,7 +93,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomDatePicker.cs">
+    <Compile Include="CustomControls\CustomDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form1.cs">
@@ -104,6 +104,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomControls\CustomDatePicker.resx">
+      <DependentUpon>CustomDatePicker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

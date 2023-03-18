@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
-namespace Clock_and_Timer 
+namespace Clock_and_Timer.CustomDatePicker
 {
 	internal class CustomDatePicker : DateTimePicker
 	{
@@ -21,9 +17,10 @@ namespace Clock_and_Timer
 
 		//-> Other Values
 		private bool droppedDown = false;
-		private Image calendarIcon = Properties.Resources.calendarWhite;
+		private Image calendarIcon = (Image)Properties.Resources.calendarWhite;
 		private RectangleF iconButtonArea;
 		private const int calendarIconWidth = 34;
+		private DateTimePicker dateTimePicker1;
 		private const int arrowIconWidth = 17;
 
 		//Properties
@@ -35,7 +32,7 @@ namespace Clock_and_Timer
 				skinColor = value;
 				if(skinColor.GetBrightness() >= 0.8F)
 					calendarIcon = Properties.Resources.calendarDark;
-				else calendarIcon = Properties.Resources.calendarWhite;
+				else calendarIcon = (Image)Properties.Resources.calendarWhite;
 				this.Invalidate();
 			}
 		}
@@ -144,8 +141,19 @@ namespace Clock_and_Timer
 			else return arrowIconWidth;
 		}
 
+		private void InitializeComponent()
+		{
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.SuspendLayout();
+			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+			this.dateTimePicker1.TabIndex = 0;
+			this.ResumeLayout(false);
 
-
-
+		}
 	}
 }
